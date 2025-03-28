@@ -315,7 +315,7 @@ sed -n -e '/tom/,/Joe/p' file23
 seq 10 
 ## OUTPUT
 
-
+![Screenshot 2025-03-26 230653](https://github.com/user-attachments/assets/cd0f405a-273c-4c86-89e8-c80cb0bc59ec)
 
 seq 10 | sed -n '4,6p'
 ## OUTPUT
@@ -326,6 +326,7 @@ seq 10 | sed -n '4,6p'
 seq 10 | sed -n '2,~4p'
 ## OUTPUT
 
+![Screenshot 2025-03-26 231328](https://github.com/user-attachments/assets/58e7ab82-f889-48ee-853b-4fbc165b8071)
 
 
 seq 3 | sed '2a hello'
@@ -367,6 +368,7 @@ cat > file21
 sort file21
 ## OUTPUT
 
+![Screenshot 2025-03-28 170821](https://github.com/user-attachments/assets/2d14216c-ebfc-4764-897e-b80bb60ea7af)
 
 cat > file22
 ```
@@ -380,12 +382,16 @@ cat > file22
 uniq file22
 ## OUTPUT
 
+![Screenshot 2025-03-28 170840](https://github.com/user-attachments/assets/ab43d735-3ab6-4dbb-8307-7ef902c59f96)
 
 
 #Using tr command
 
 cat file23 | tr [:lower:] [:upper:]
  ## OUTPUT
+
+![Screenshot 2025-03-28 170851](https://github.com/user-attachments/assets/45b64a7b-dca4-403c-809c-9efccd565c2a)
+
 
 cat < urllist.txt
 ```
@@ -403,11 +409,13 @@ www. mrcet.... com
 cat urllist.txt | tr -d ' '
  ## OUTPUT
 
+![Screenshot 2025-03-28 170908](https://github.com/user-attachments/assets/f0ce5c82-4928-449f-95ad-9db29996ff24)
 
  
 cat urllist.txt | tr -d ' ' | tr -s '.'
 ## OUTPUT
 
+![Screenshot 2025-03-28 170917](https://github.com/user-attachments/assets/22251b0c-439c-41e4-a96a-5b1cecf3e7fa)
 
 
 #Backup commands
