@@ -160,6 +160,8 @@ cat newfile | grep -i -c "hello"
 
 
 grep -R ubuntu /etc
+
+![Screenshot 2025-03-26 213635](https://github.com/user-attachments/assets/b0a771b5-a17e-4575-aea1-44e7e538dd63)
 ## OUTPUT
 
 ![Screenshot 2025-03-26 213732](https://github.com/user-attachments/assets/cf1a5cc0-9dc4-4d8f-ab2b-fa9383c760c0)
@@ -320,19 +322,14 @@ seq 10
 seq 10 | sed -n '4,6p'
 ## OUTPUT
 
-![Screenshot 2025-03-26 230653](https://github.com/user-attachments/assets/edd24d21-c160-4169-a72f-dd3a92c6beaf)
 
+![Screenshot 2025-03-26 231316](https://github.com/user-attachments/assets/69b65dae-0785-485f-9f30-67cdd5e8c7e2)
 
 seq 10 | sed -n '2,~4p'
 ## OUTPUT
 
 ![Screenshot 2025-03-26 231328](https://github.com/user-attachments/assets/58e7ab82-f889-48ee-853b-4fbc165b8071)
 
-
-seq 3 | sed '2a hello'
-## OUTPUT
-
-![Screenshot 2025-03-26 231316](https://github.com/user-attachments/assets/69b65dae-0785-485f-9f30-67cdd5e8c7e2)
 
 
 seq 2 | sed '2i hello'
@@ -353,6 +350,8 @@ sed -n '2,4{s/^/$/;p}' file23
 
 
 sed -n '2,4{s/$/*/;p}' file23
+
+
 ![Screenshot 2025-03-26 232049](https://github.com/user-attachments/assets/e3dc63b1-1e81-4ef7-a2e1-a35d940d3de7)
 
 
@@ -418,29 +417,30 @@ cat urllist.txt | tr -d ' ' | tr -s '.'
 ![Screenshot 2025-03-28 170917](https://github.com/user-attachments/assets/22251b0c-439c-41e4-a96a-5b1cecf3e7fa)
 
 
-#Backup commands
-tar -cvf backup.tar *
-## OUTPUT
-
-
-mkdir backupdir
- 
-mv backup.tar backupdir
- 
-tar -tvf backup.tar
-## OUTPUT
-
 
 tar -xvf backup.tar
 ## OUTPUT
 
+![Screenshot 2025-03-28 175145](https://github.com/user-attachments/assets/6399a46b-b440-46a3-abff-3000610e3fe0)
+
+
 gzip backup.tar
 
-ls .gz
+ls *.gz
 ## OUTPUT
+
+
+![Screenshot 2025-03-28 175249](https://github.com/user-attachments/assets/f8bc62f8-9f54-4fd2-802e-0725600c9d55)
+
+
+
  
 gunzip backup.tar.gz
 ## OUTPUT
+
+
+![Screenshot 2025-03-28 175257](https://github.com/user-attachments/assets/d985a497-3228-42d6-bc0d-7a2972733fe7)
+
 
  
 # Shell Script
@@ -451,6 +451,9 @@ echo 'echo Hello World‘; exit 0 >> my-script.sh
 chmod 755 my-script.sh
 ./my-script.sh
 ## OUTPUT
+
+
+![Screenshot 2025-03-28 175306](https://github.com/user-attachments/assets/60a57ad4-1002-44b5-ad75-14706ed6d584)
 
  
 cat << stop > herecheck.txt
@@ -463,6 +466,9 @@ stop
 
 cat herecheck.txt
 ## OUTPUT
+
+
+![Screenshot 2025-03-28 175316](https://github.com/user-attachments/assets/2c38abbb-fbab-4c42-892d-cf0eaf07ef8d)
 
 
 cat < scriptest.sh 
@@ -502,23 +508,24 @@ chmod 777 scriptest.sh
 
 ## OUTPUT
 
+
+
+![Screenshot 2025-03-30 123324](https://github.com/user-attachments/assets/7d201ce6-3c13-4dd1-97e8-cef80f2c494e)
+
  
 ls file1
 ## OUTPUT
 
-echo $?
-## OUTPUT 
-./one
-bash: ./one: Permission denied
- 
-echo $?
-## OUTPUT 
- 
-abcd
- 
-echo $?
- ## OUTPUT
 
+![Screenshot 2025-03-30 123336](https://github.com/user-attachments/assets/85aedb2c-becd-4664-9202-af3ac6976aa2)
+
+
+
+echo $?
+## OUTPUT 
+
+
+![Screenshot 2025-03-30 123342](https://github.com/user-attachments/assets/0036fe18-2d3d-4759-a578-658b573082a3)
 
  
 # mis-using string comparisons
@@ -552,11 +559,16 @@ fi
 ##OUTPUT
 
 
+![Screenshot 2025-03-30 123405](https://github.com/user-attachments/assets/56034afc-12c3-4715-9554-26ff2e284977)
+
 
 chmod 755 strcomp.sh
  
 ./strcomp.sh 
 ## OUTPUT
+
+![Screenshot 2025-03-30 123418](https://github.com/user-attachments/assets/d19af3dc-3cd1-4e46-88be-2a6a39dbdc67)
+
 
 
 # check file ownership
@@ -584,6 +596,11 @@ fi
  ```
 ./psswdperm.sh
 ## OUTPUT
+
+
+![Screenshot 2025-03-30 123426](https://github.com/user-attachments/assets/c576acc6-7fd6-4063-87c8-50b3eba4f2d4)
+
+
 
 # check if with file location
 cat>ifnested.sh 
